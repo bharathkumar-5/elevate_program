@@ -47,16 +47,11 @@ function Quiz() {
       <p id='question'>
       {/* {list.map((el,index) => { return  <li key={index}>{el}</li>} )} */}
       <ol>
-      {mcqQuestions.map((el,index)=>{return <li key={index}>{el.question}</li>})}
+      {mcqQuestions.map((el,index)=>{return <li key={index}>{el.question }<br/><ul><p>{el.options.map(el=>{return <p><input type="checkbox" name="check" id="check" />{el}<br/></p>})}</p></ul></li>})}
       </ol>
-      <ul>
-      {/* {mcqQuestions.map((el,index)=>{return <li key={index}>{el.options}</li>})} */}
-      </ul>
-      
-    
       </p>
     </div>
   )
-}
+} 
 
 export default Quiz
